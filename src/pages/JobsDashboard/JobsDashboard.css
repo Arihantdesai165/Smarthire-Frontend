@@ -1,0 +1,115 @@
+.jobs-dashboard {
+  padding-bottom: 80px;
+}
+
+.dashboard-header {
+  margin-bottom: 40px;
+}
+
+.dashboard-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.dashboard-subtitle {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.search-section {
+  padding: 24px;
+  margin-bottom: 48px;
+}
+
+.search-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.search-item {
+  display: flex;
+  gap: 10px;
+}
+
+.search-input-wrapper {
+  position: relative;
+  flex: 1;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+}
+
+.search-input-wrapper .form-input {
+  padding-left: 38px;
+}
+
+.active-search-info {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.clear-search-icon {
+  cursor: pointer;
+  margin-left: 8px;
+  transition: transform var(--transition-fast);
+}
+
+.clear-search-icon:hover {
+  transform: scale(1.2);
+  color: var(--danger);
+}
+
+.jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 24px;
+}
+
+.empty-state {
+  padding: 80px 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.empty-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--bg-glass);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.empty-state h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.empty-state p {
+  color: var(--text-secondary);
+  max-width: 400px;
+}
+
+@media (max-width: 1024px) {
+  .search-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .dashboard-title { font-size: 2rem; }
+  .jobs-grid { grid-template-columns: 1fr; }
+}

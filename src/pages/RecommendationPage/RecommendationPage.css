@@ -1,0 +1,122 @@
+.recommendation-input {
+  padding: 32px;
+  max-width: 800px;
+  margin: 0 auto 60px;
+}
+
+.recommendation-input form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-hint {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.recommendations-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.recommendations-container .section-title {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.recommendations-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.recommendation-card {
+  padding: 24px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 32px;
+}
+
+.rec-match-score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.rec-match-circle {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 4px solid var(--bg-glass);
+  border-top-width: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+.rec-match-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.rec-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.rec-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.rec-company {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.rec-progress {
+  margin-top: 8px;
+  max-width: 300px;
+}
+
+.recommendation-placeholder {
+  padding: 100px 20px;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.placeholder-icon {
+  font-size: 4rem;
+  margin-bottom: 24px;
+  opacity: 0.2;
+}
+
+.placeholder-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .recommendation-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 20px;
+  }
+  .rec-match-score { order: -1; }
+  .rec-info { align-items: center; }
+  .rec-progress { max-width: 100%; width: 100%; }
+}

@@ -1,0 +1,12 @@
+.page-content {
+  padding-top: 100px;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .page-content {
+    padding-top: 80px;
+  }
+}
