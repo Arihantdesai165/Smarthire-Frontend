@@ -45,3 +45,23 @@ export const getErrorMessage = (error) => {
   if (error.message) return error.message
   return 'Something went wrong. Please try again.'
 }
+
+/**
+ * Format date to relative time (e.g., "2 hours ago")
+ */
+export const timeAgo = (dateInput) => {
+  if (!dateInput) return '';
+  const date = new Date(dateInput);
+  const now = new Date();
+  const seconds = Math.round((now - date) / 1000);
+  const minutes = Math.round(seconds / 60);
+  const hours = Math.round(minutes / 60);
+  const days = Math.round(hours / 24);
+
+  if (seconds < 60) return 'Just now';
+  if (minutes < 60) return `${minutes}m ago`;
+  if (hours < 24) return `${hours}h ago`;
+  if (days < 30) return `${days}d ago`;
+  
+  return date.toLocaleDateString();
+};
