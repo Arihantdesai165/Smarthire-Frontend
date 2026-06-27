@@ -1,65 +1,95 @@
-# SmartHire — Intelligent Job Board & Recruitment System
+# SmartHire Frontend 🚀
 
-A modern, responsive React frontend for the SmartHire recruitment platform.
+A modern, AI-powered job recruitment platform built with React and Vite. SmartHire connects top talent with leading companies using intelligent job recommendations and a seamless hiring experience.
 
-## Features
+## ✨ Features
 
-- **JWT Authentication**: Secure login and registration with role-based access.
-- **Jobs Dashboard**: Browse, search, and filter job opportunities by title, location, and skills.
-- **AI Matchmaker**: Get job recommendations based on your professional skills with match percentage visualization.
-- **Recruiter Portal**: Post new job listings with detailed requirements.
-- **Premium UI**: Dark-themed, glassmorphic design using modern CSS practices.
-- **Mobile Responsive**: Fully optimized for all screen sizes.
+- **AI-Powered Recommendations** — Matches your skills with the most relevant job openings
+- **Smart Job Search** — Filter by title, location, and skill sets
+- **Verified Companies** — Every company undergoes rigorous verification
+- **Secure Authentication** — JWT-based auth with protected routes
+- **Dark Mode UI** — Premium glassmorphism design system
+- **Real-time Notifications** — Toast alerts for seamless UX
 
-## Tech Stack
+## 🛠 Tech Stack
 
-- **React 19**
-- **Vite** (Build Tool)
-- **React Router DOM** (Navigation)
-- **Axios** (API Requests)
-- **React Icons** (Modern Iconography)
-- **React Hot Toast** (Notifications)
+| Category        | Technology                  |
+|-----------------|-----------------------------|
+| Framework       | React 19 + Vite 6           |
+| Routing         | React Router DOM v7         |
+| HTTP Client     | Axios                       |
+| Notifications   | React Hot Toast             |
+| Icons           | React Icons (Heroicons)     |
+| Styling         | Vanilla CSS (Design System) |
 
-## Prerequisites
+## 📦 Getting Started
 
-- Node.js (v18+)
-- npm or yarn
-- **Backend**: Ensure the Spring Boot backend is running at `http://localhost:8080`.
+### Prerequisites
+- Node.js >= 18
+- npm >= 9
 
-## Installation
+### Installation
 
-1. Clone the repository.
-2. Navigate to the project directory:
-   ```bash
-   cd SmartHire_Frontend
-   ```
-3. Install dependencies:
-   ```bash
-   npm install
-   ```
-4. Create a `.env` file (already provided) and verify the backend URL:
-   ```
-   VITE_API_BASE_URL=http://localhost:8080
-   ```
-
-## Running the Project
-
-To start the development server:
 ```bash
+# Clone the repository
+git clone https://github.com/Arihantdesai165/Smarthire-Frontend.git
+
+# Navigate into the project
+cd Smarthire-Frontend
+
+# Install dependencies
+npm install
+
+# Start the development server
 npm run dev
 ```
-The application will be available at `http://localhost:3000`.
 
-## Project Structure
+The app will be available at `http://localhost:5173`
+
+## 🌐 Environment Variables
+
+Create a `.env` file in the root directory:
+
+```env
+VITE_API_BASE_URL=http://localhost:8080
+```
+
+## 📁 Project Structure
 
 ```
 src/
-├── api/          # Axios configuration
-├── components/   # Reusable UI components (Navbar, JobCard)
-├── pages/        # Application pages (Landing, Login, Register, Dashboard, etc.)
-├── routes/       # Protected route handling
-├── services/     # API service layer (Auth, Jobs)
-├── utils/        # Helper functions and formatters
-├── App.jsx       # Main application component
-└── index.css     # Global design system
+├── api/            # Axios instance and interceptors
+├── components/     # Reusable UI components (Navbar, JobCard)
+├── pages/          # Page-level components
+│   ├── LandingPage/
+│   ├── LoginPage/
+│   ├── RegisterPage/
+│   ├── JobsDashboard/
+│   ├── RecommendationPage/
+│   └── CreateJobPage/
+├── routes/         # Protected route wrapper
+├── services/       # API service functions (auth, jobs)
+├── utils/          # Helper utilities
+├── index.css       # Global design system tokens
+└── App.jsx         # Root component with routing
 ```
+
+## 🚀 Scripts
+
+| Script         | Description                   |
+|----------------|-------------------------------|
+| `npm run dev`  | Start development server      |
+| `npm run build`| Build for production          |
+| `npm run preview` | Preview production build   |
+
+## 🎨 Design System
+
+The project uses a custom CSS design system with:
+- **Color Palette**: Indigo primary + Emerald accent
+- **Glassmorphism** cards with backdrop blur
+- **Smooth animations** and micro-interactions
+- **Responsive** mobile-first layouts
+
+## 📄 License
+
+MIT License — feel free to use this project for learning and development.
