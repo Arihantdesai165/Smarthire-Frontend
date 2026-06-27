@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { jobService } from '../../services/jobService';
 import { getErrorMessage, getMatchColor } from '../../utils/helpers';
+import Loader from '../../components/Loader/Loader';
 import { HiOutlineSparkles, HiOutlineChip, HiOutlineBriefcase, HiOutlineOfficeBuilding } from 'react-icons/hi';
 import { toast } from 'react-hot-toast';
 import './RecommendationPage.css';
@@ -70,10 +71,7 @@ const RecommendationPage = () => {
       </div>
 
       {loading ? (
-        <div className="loading-container">
-          <div className="spinner"></div>
-          <p>Matching your skills with 10,000+ opportunities...</p>
-        </div>
+        <Loader text="Matching your skills with 10,000+ opportunities..." />
       ) : searched ? (
         <div className="recommendations-container">
           <h2 className="section-title">Top Matches for You</h2>
