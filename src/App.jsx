@@ -2,6 +2,7 @@ import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 import Navbar from './components/Navbar/Navbar';
+import Footer from './components/Footer/Footer';
 import ProtectedRoute from './routes/ProtectedRoute';
 import './App.css';
 
@@ -61,6 +62,7 @@ function App() {
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>
+      <Footer />
     </>
   );
 }
