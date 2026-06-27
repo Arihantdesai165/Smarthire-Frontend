@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { jobService } from '../../services/jobService';
 import { getErrorMessage } from '../../utils/helpers';
 import JobCard from '../../components/JobCard/JobCard';
+import JobCardSkeleton from '../../components/JobCard/JobCardSkeleton';
 import { HiOutlineSearch, HiOutlineLocationMarker, HiOutlineChip, HiOutlineX } from 'react-icons/hi';
 import { toast } from 'react-hot-toast';
 import './JobsDashboard.css';
@@ -139,9 +140,10 @@ const JobsDashboard = () => {
 
       {/* Jobs Grid */}
       {loading ? (
-        <div className="loading-container">
-          <div className="spinner"></div>
-          <p>Fetching amazing jobs for you...</p>
+        <div className="jobs-grid">
+          {[...Array(6)].map((_, i) => (
+            <JobCardSkeleton key={i} />
+          ))}
         </div>
       ) : jobs.length > 0 ? (
         <div className="jobs-grid">
