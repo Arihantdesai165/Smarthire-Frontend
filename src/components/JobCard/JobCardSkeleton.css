@@ -1,0 +1,83 @@
+.job-card-skeleton {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: 100%;
+}
+
+.skeleton-pulse {
+  background: linear-gradient(90deg, var(--bg-secondary) 0%, rgba(255, 255, 255, 0.05) 50%, var(--bg-secondary) 100%);
+  background-size: 200% 100%;
+  animation: pulse 1.5s infinite linear;
+  border-radius: var(--radius-sm);
+}
+
+@keyframes pulse {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.skeleton-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.skeleton-title {
+  height: 24px;
+  width: 60%;
+}
+
+.skeleton-badge {
+  height: 24px;
+  width: 60px;
+  border-radius: var(--radius-full);
+}
+
+.skeleton-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-grow: 1;
+}
+
+.skeleton-line {
+  height: 14px;
+  width: 100%;
+}
+
+.skeleton-line.short {
+  width: 80%;
+}
+
+.skeleton-details {
+  display: flex;
+  gap: 16px;
+  margin-top: auto;
+}
+
+.skeleton-detail {
+  height: 20px;
+  width: 100px;
+}
+
+.skeleton-skills {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.skeleton-skill {
+  height: 24px;
+  width: 70px;
+  border-radius: var(--radius-full);
+}
+
+.skeleton-btn {
+  height: 36px;
+  width: 100px;
+  margin-top: 8px;
+  border-radius: var(--radius-md);
+}
