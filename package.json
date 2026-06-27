@@ -1,5 +1,7 @@
 {
   "name": "smarthire-frontend",
+  "description": "AI-powered job recruitment platform frontend",
+  "author": "Arihant Desai",
   "private": true,
   "version": "1.0.0",
   "type": "module",
