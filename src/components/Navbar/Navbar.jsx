@@ -34,7 +34,7 @@ const Navbar = () => {
       <div className="navbar__inner container">
         <Link to="/" className="navbar__brand">
           <div className="navbar__logo">
-            <HiOutlineBriefcase />
+            <HiOutlineBriefcase aria-hidden="true" />
           </div>
           <span className="navbar__name">Smart<span className="text-gradient">Hire</span></span>
         </Link>
@@ -42,15 +42,15 @@ const Navbar = () => {
         {isAuth && (
           <div className={`navbar__links ${mobileOpen ? 'navbar__links--open' : ''}`}>
             <Link to="/jobs" className={`navbar__link ${isActive('/jobs') ? 'navbar__link--active' : ''}`}>
-              <HiOutlineBriefcase />
+              <HiOutlineBriefcase aria-hidden="true" />
               <span>Jobs</span>
             </Link>
             <Link to="/recommendations" className={`navbar__link ${isActive('/recommendations') ? 'navbar__link--active' : ''}`}>
-              <HiOutlineSparkles />
+              <HiOutlineSparkles aria-hidden="true" />
               <span>AI Match</span>
             </Link>
             <Link to="/create-job" className={`navbar__link ${isActive('/create-job') ? 'navbar__link--active' : ''}`}>
-              <HiOutlinePlusCircle />
+              <HiOutlinePlusCircle aria-hidden="true" />
               <span>Post Job</span>
             </Link>
           </div>
@@ -66,7 +66,7 @@ const Navbar = () => {
                 <span className="navbar__email">{user?.email}</span>
               </div>
               <button onClick={handleLogout} className="btn btn-sm btn-secondary navbar__logout" id="logout-btn">
-                <HiOutlineLogout />
+                <HiOutlineLogout aria-hidden="true" />
                 <span>Logout</span>
               </button>
             </>
