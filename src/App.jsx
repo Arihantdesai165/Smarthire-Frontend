@@ -13,6 +13,7 @@ import RegisterPage from './pages/RegisterPage/RegisterPage';
 import JobsDashboard from './pages/JobsDashboard/JobsDashboard';
 import RecommendationPage from './pages/RecommendationPage/RecommendationPage';
 import CreateJobPage from './pages/CreateJobPage/CreateJobPage';
+import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
 
 function App() {
   return (
@@ -59,7 +60,7 @@ function App() {
             } 
           />
           
-          <Route path="*" element={<Navigate to="/" replace />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </main>
       <Footer />
