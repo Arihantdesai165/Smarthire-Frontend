@@ -3,6 +3,7 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 import ProtectedRoute from './routes/ProtectedRoute';
 import './App.css';
 
@@ -64,6 +65,7 @@ function App() {
         </Routes>
       </main>
       <Footer />
+      <ScrollToTop />
     </>
   );
 }
