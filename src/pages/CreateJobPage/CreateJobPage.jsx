@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { jobService } from '../../services/jobService';
 import { getErrorMessage } from '../../utils/helpers';
+import { EXPERIENCE_LEVELS } from '../../utils/constants';
 import { HiOutlineBriefcase, HiOutlineDocumentText, HiOutlineChip, HiOutlineCurrencyDollar, HiOutlineLocationMarker, HiOutlineCollection } from 'react-icons/hi';
 import { toast } from 'react-hot-toast';
 import './CreateJobPage.css';
@@ -135,15 +136,18 @@ const CreateJobPage = () => {
                 <label className="form-label">Min. Experience (Years)</label>
                 <div className="input-with-icon">
                   <HiOutlineCollection className="input-icon" />
-                  <input 
-                    type="number" 
+                  <select 
                     name="experienceRequired"
                     className="form-input" 
-                    placeholder="e.g. 3"
                     required
                     value={formData.experienceRequired}
                     onChange={handleChange}
-                  />
+                  >
+                    <option value="" disabled>Select experience level</option>
+                    {EXPERIENCE_LEVELS.map(level => (
+                      <option key={level.value} value={level.value}>{level.label}</option>
+                    ))}
+                  </select>
                 </div>
               </div>
             </div>
