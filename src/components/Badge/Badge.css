@@ -1,0 +1,4 @@
+.badge { padding: 4px 8px; border-radius: 12px; font-size: 12px; font-weight: bold; }
+.badge-primary { background-color: #007bff; color: white; }
+.badge-success { background-color: #28a745; color: white; }
+
